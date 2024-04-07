@@ -23,13 +23,12 @@
 
 	
     <div id="ads-container">
-        <!-- Ads will be loaded here -->
     </div>
     <script>
-        // Fetch and insert ads content from ads.html
         fetch('ads.html')
             .then(response => response.text())
             .then(html => {
+                // Inject ads script into ads-container
                 document.getElementById('ads-container').innerHTML = html;
             })
             .catch(error => console.error('Error fetching ads:', error));
